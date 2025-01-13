@@ -1,0 +1,94 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/* Contenedor principal */
+.board-list-container {
+    margin-top: 50px;
+    width: 390px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: #2e2e3e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-btn {
+    display: flex;
+    gap: 8px;
+}
+
+/* Título */
+.board-list-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Lista */
+.board-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elemento de la lista */
+.board-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: white;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.board-item:hover {
+    background-color: #3e3e4e;
+}
+
+/* Nombre del tablero */
+.board-name {
+    font-size: 1rem;
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Botón */
+.board-button {
+    background-color: #3B633B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.board-button:hover {
+    background-color: #51B13F;
+}
+
+.board-button-delete {
+    background-color: #5B333C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.board-button-delete:hover {
+    background-color: #B1413F;
+}
+
+.Tableros {
+    margin-top: 50px;
+}

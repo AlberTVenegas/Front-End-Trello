@@ -1,0 +1,257 @@
+.list {
+  transition: all ease 0.2s;
+  padding: 10px;
+  will-change: transform, box-shadow;
+}
+
+.box-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-container {
+  background-color: #2e2e3e;
+  border-radius: 16px;
+  margin: 10px;
+  width: 370px;
+  min-height: 900px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.list-container .list-header {
+  padding: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.color-red {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #f44336a1;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+.color-gren {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #5cf436a1;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+.color-yellow {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #e7f436a1;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+.card {
+  background-color: #3e3e4e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.card .padin {
+  margin: 10px;
+  padding: 10px;
+}
+
+.list:hover {
+  transform: scale(1.02);
+}
+
+.priority {
+  background-color: #f4433656;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  color: #f44336;
+  border: #f44336 1px solid;
+  margin-left: auto;
+  align-items: center;
+}
+
+.title {
+  color: white;
+}
+
+.separator {
+  border-bottom: #0000006c solid 2px;
+}
+
+.btn-delete {
+  height: 24px;
+  width: 24px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+}
+
+.btn-delete:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.card-etiqueta-alta {
+  margin: 10px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c3584a31;
+  max-width: fit-content;
+  border: #c34a4a70 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.card-etiqueta-media {
+  margin: 10px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c1c34a31;
+  max-width: fit-content;
+  border: #c3b74a70 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.card-etiqueta-baja {
+  margin: 10px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8bc34a31;
+  max-width: fit-content;
+  border: #8bc34a70 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.priority-alta {
+  color: #c34a4a9d;
+  font-size: 16px;
+}
+
+.priority-media {
+  color: #bbc34a9d;
+  font-size: 16px;
+}
+
+.priority-baja {
+  color: #8bc34a9d;
+  font-size: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-weight: 500;
+  color: #a0a0b0;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.acciones {
+  display: flex;
+  width: 35px;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.dd-zone {
+  height: 500px;
+}
+
+.box-content {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+
+  gap: 16px;
+}
+
+.colors-Por-hacer {
+  background-color: #f443363a;
+  height: 4px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  z-index: -1;
+}
+
+.colors-Terminado {
+  background-color: #5cf43644;
+  height: 4px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.colors-En-Progreso {
+  background-color: #e7f4363d;
+  height: 4px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.txt-title {
+  font-size: 32px;
+}
+
+.serparator-title {
+  background-color: #2e2e3e;
+  height: 5px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.title-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 16px;
+  height: 100%;
+
+}
