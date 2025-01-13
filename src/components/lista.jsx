@@ -65,7 +65,7 @@ function Lista({ task, getTask }) {
         content = "priority-media";
         card = "card-etiqueta-media";
         break;
-      case "BAJA":
+      case "Baja":
         content = "priority-baja";
         card = "card-etiqueta-baja";
         break;
