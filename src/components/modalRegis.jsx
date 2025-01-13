@@ -13,6 +13,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
       style: {
         backgroundColor: "#1E1E2E",
         color: "white",
+        duration: 4000,
       },
     });
 
@@ -21,6 +22,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
       await addTask(data);
       getTask();
       closeModal(false);
+      notify()
     }
     handleSubmit(data);
   };
@@ -132,7 +134,6 @@ function ModalRegis({ closeModal, getTask, proyect }) {
               className="px-4 py-2 rounded-md bg-[#51B13F] text-white hover:bg-[#3DDC97]"
               type="submit"
               value="Guardar"
-              onClick={notify}
             ></input>
           </div>
         </form>

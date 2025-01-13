@@ -17,6 +17,7 @@ function Lista({ task, getTask }) {
       style: {
         backgroundColor: "#1E1E2E",
         color: "white",
+        duration: 4000,
       },
     });
   const handleClick = (id) => {

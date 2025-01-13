@@ -25,6 +25,7 @@ function ModalTablero({ getTebleros, closeModalProyect }) {
       style: {
         backgroundColor: "#1E1E2E",
         color: "white",
+        duration: 4000,
       },
     });
 

@@ -1,11 +1,21 @@
 /* eslint-disable react/prop-types */
 import "./tableros.css";
 import { deleteTablero } from "../api/trello";
+import toast from "react-hot-toast";
 
 export function Tableros({ proyect, setTablero_active, getTebleros }) {
+  const notify = () =>
+    toast.success("Tablero Eliminado!!", {
+      style: {
+        backgroundColor: "#1E1E2E",
+        color: "white",
+        duration: 4000,
+      },
+    });
   const handleDelete = async (id) => {
     await deleteTablero(id);
     getTebleros();
+    notify();
   };
 
   return (
