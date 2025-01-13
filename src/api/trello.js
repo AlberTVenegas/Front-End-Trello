@@ -1,15 +1,10 @@
 import axios from 'axios';
 
 
-axios.create({
-    baseURL: 'http://localhost:5173/api'
-})
-
-
 
 
 export const getallTasks = () => {
-    return axios.get('http://localhost:8000/trello/api/v1/tareas/')
+    return axios.get('https://back-end-trello.onrender/trello/api/v1/tareas/')
 }
 
 export const updateStateTask = (id, stateUpdate) => {
