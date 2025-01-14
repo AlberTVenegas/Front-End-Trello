@@ -13,7 +13,10 @@ import {
   useSensor,
   useSensors,
   PointerSensor,
+  
 } from "@dnd-kit/core";
+
+
 
 function Lista_en_progreso() {
   const sensors = useSensors(
@@ -73,7 +76,7 @@ function Lista_en_progreso() {
       const filteredTasks = getTaskByTablero(tablero_active);
       setResFiltes(filteredTasks);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tablero_active, res]);
 
   const handleDragEnd = (evento) => {
@@ -108,13 +111,24 @@ function Lista_en_progreso() {
 
           <div className="serparator-title"></div>
 
-          <BtnRegis getTask={getTask} getTebleros={getTebleros} proyect={proyect}></BtnRegis>
+          <BtnRegis
+            getTask={getTask}
+            getTebleros={getTebleros}
+            proyect={proyect}
+          ></BtnRegis>
           <div className="Tableros">
-            <Tableros proyect={proyect} getTebleros={getTebleros} setTablero_active={setTablero_active} />
+            <Tableros
+              proyect={proyect}
+              getTebleros={getTebleros}
+              setTablero_active={setTablero_active}
+            />
           </div>
         </div>
         <section className="box-columns">
-          <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
+          <DndContext
+            onDragEnd={handleDragEnd}
+            sensors={sensors}
+          >
             {columns.map((col) => {
               return (
                 <Columns

@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
 }
 
 .list-container {
@@ -17,8 +18,18 @@
   margin: 10px;
   width: 370px;
   min-height: 900px;
+  max-height: 900px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  /* Habilitar scroll vertical */
+
+  padding: 10px;
+
+
 }
+
+
+
 
 .list-container .list-header {
   padding: 10px;
@@ -72,6 +83,7 @@
   border-color: rgba(255, 255, 255, 0.1);
   color: white;
   transition: background-color 0.5s ease;
+
 }
 
 .card .padin {
@@ -195,7 +207,11 @@
 }
 
 .dd-zone {
-  height: 500px;
+
+  height: 760px;
+
+
+
 }
 
 .box-content {

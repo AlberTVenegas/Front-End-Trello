@@ -6,6 +6,7 @@ import { useDraggable } from "@dnd-kit/core";
 import { deleteTask } from "../api/trello";
 import toast, { Toaster } from "react-hot-toast";
 
+
 function Lista({ task, getTask }) {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: task.id,
