@@ -13,7 +13,6 @@ function Lista({ task, getTask }) {
 
   const [result_delete, setResult_delete] = useState(false);
 
-
   const handleClick = (id) => {
     async function handleDelete(id) {
       toast.promise(
@@ -24,7 +23,7 @@ function Lista({ task, getTask }) {
         })(),
         {
           loading: "Cargando...",
-          success: <b>Tarea Elimada!!</b>,
+          success: <b>Tarea Eliminada!!</b>,
           error: <b>Could not save.</b>,
         },
         {
