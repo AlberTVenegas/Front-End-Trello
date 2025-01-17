@@ -24,7 +24,7 @@ function Lista({ task, getTask }) {
         })(),
         {
           loading: "Cargando...",
-          success: <b>Tarea Elimanda!</b>,
+          success: <b>Tarea Elimada!!</b>,
           error: <b>Could not save.</b>,
         },
         {
