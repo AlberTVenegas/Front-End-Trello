@@ -19,7 +19,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
         })(),
         {
           loading: "Registrando Tarea...",
-          success: <b>Tareas Registrada!!</b>,
+          success: <b>Tarea Registrada!!</b>,
           error: <b>Error al registrar.</b>,
         },
         {
