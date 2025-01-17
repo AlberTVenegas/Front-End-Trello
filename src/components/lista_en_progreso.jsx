@@ -13,10 +13,7 @@ import {
   useSensor,
   useSensors,
   PointerSensor,
-  
 } from "@dnd-kit/core";
-
-
 
 function Lista_en_progreso() {
   const sensors = useSensors(
@@ -28,7 +25,9 @@ function Lista_en_progreso() {
   );
   const [res, setRes] = useState([]);
   const [proyect, setProyect] = useState([]);
-  const [tablero_active, setTablero_active] = useState();
+  const [tablero_active, setTablero_active] = useState({
+    nombre: " ",
+  });
   const [resfilter, setResFiltes] = useState([]);
 
   const columns = [
@@ -108,15 +107,17 @@ function Lista_en_progreso() {
       <div className="box-content">
         <div className="title-btn">
           <h1 className="txt-title">Organiza tu Trabajo</h1>
-
           <div className="serparator-title"></div>
-
           <BtnRegis
             getTask={getTask}
             getTebleros={getTebleros}
             proyect={proyect}
           ></BtnRegis>
           <div className="Tableros">
+            <section className="active-board">
+              <h3 className="txt-tilte-board">Tablero Activo:</h3>
+              <h3 className="txt-active">{tablero_active.nombre}</h3>
+            </section>
             <Tableros
               proyect={proyect}
               getTebleros={getTebleros}
@@ -124,11 +125,9 @@ function Lista_en_progreso() {
             />
           </div>
         </div>
+
         <section className="box-columns">
-          <DndContext
-            onDragEnd={handleDragEnd}
-            sensors={sensors}
-          >
+          <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
             {columns.map((col) => {
               return (
                 <Columns
@@ -137,7 +136,6 @@ function Lista_en_progreso() {
                   res={resfilter}
                   key={col.id}
                   getTask={getTask}
-                  tablero_active={tablero_active}
                 ></Columns>
               );
             })}

@@ -4,18 +4,25 @@ import { deleteTablero } from "../api/trello";
 import toast from "react-hot-toast";
 
 export function Tableros({ proyect, setTablero_active, getTebleros }) {
-  const notify = () =>
-    toast.success("Tablero Eliminado!!", {
-      style: {
-        backgroundColor: "#1E1E2E",
-        color: "white",
-        duration: 4000,
-      },
-    });
   const handleDelete = async (id) => {
-    await deleteTablero(id);
-    getTebleros();
-    notify();
+    toast.promise(
+      (async () => {
+        await deleteTablero(id);
+        getTebleros();
+      })(),
+      {
+        loading: "Cargando...",
+        success: <b>Tablero Eliminado!</b>,
+        error: <b>Could not save.</b>,
+      },
+      {
+        style: {
+          backgroundColor: "#1E1E2E",
+          color: "white",
+          duration: 4000,
+        },
+      }
+    );
   };
 
   return (

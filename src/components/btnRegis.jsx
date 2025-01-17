@@ -8,7 +8,7 @@ import ModalTablero from "./modalTablero";
 function BtnRegis({ getTask, getTebleros, proyect }) {
   const [modal, setModal] = useState(false);
   const [modalProyect, setModalProyect] = useState(false);
-  const [result, setResult] = useState(false);
+  const [, setResult] = useState(false);
 
   const resultado = (res) => {
     setResult(res);

@@ -208,8 +208,6 @@
 
   height: 760px;
 
-
-
 }
 
 .box-content {
@@ -264,8 +262,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 16px;
   height: 100%;
 
+}
+.Tableros{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.active-board{
+  font-size: 18px;
+  background: #2E2E3E;
+  border-radius: 8px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  width: 330px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+  
+}
+.txt-tilte-board{
+  margin-left: 16px;
+}
+.txt-active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: #1E1E2E;
+  height: 40px;
+  width:175px;
+  margin-left: 10px;
+  border-radius: 8px;
 }

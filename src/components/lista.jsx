@@ -6,27 +6,35 @@ import { useDraggable } from "@dnd-kit/core";
 import { deleteTask } from "../api/trello";
 import toast, { Toaster } from "react-hot-toast";
 
-
 function Lista({ task, getTask }) {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: task.id,
   });
 
   const [result_delete, setResult_delete] = useState(false);
-  const notify_delete = () =>
-    toast.success("Tarea Eliminada con exito", {
-      style: {
-        backgroundColor: "#1E1E2E",
-        color: "white",
-        duration: 4000,
-      },
-    });
+
+
   const handleClick = (id) => {
     async function handleDelete(id) {
-      await deleteTask(id);
-      await getTask();
-      notify_delete();
-      setResult_delete(false);
+      toast.promise(
+        (async () => {
+          await deleteTask(id);
+          await getTask();
+          setResult_delete(false);
+        })(),
+        {
+          loading: "Cargando...",
+          success: <b>Tarea Elimanda!</b>,
+          error: <b>Could not save.</b>,
+        },
+        {
+          style: {
+            backgroundColor: "#1E1E2E",
+            color: "white",
+            duration: 4000,
+          },
+        }
+      );
 
       // Esto activará el efecto
     }

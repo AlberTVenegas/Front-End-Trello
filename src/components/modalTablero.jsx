@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
 import { addTablero } from "../api/trello";
-import {toast} from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 function ModalTablero({ getTebleros, closeModalProyect }) {
   const { register, handleSubmit } = useForm({
@@ -12,22 +12,29 @@ function ModalTablero({ getTebleros, closeModalProyect }) {
 
   const onSubmit = (data) => {
     async function handleSubmit(data) {
-      await addTablero(data);
-      getTebleros();
-      closeModalProyect(false);
-      notify()
+      toast.promise(
+        (async () => {
+          await addTablero(data);
+
+          getTebleros();
+          closeModalProyect(false);
+        })(),
+        {
+          loading: "Cargando...",
+          success: <b>Tablero Registrado!</b>,
+          error: <b>Could not save.</b>,
+        },
+        {
+          style: {
+            backgroundColor: "#1E1E2E",
+            color: "white",
+            duration: 4000,
+          },
+        }
+      );
     }
     handleSubmit(data);
-    console.log(data);
   };
-  const notify = () =>
-    toast.success("Tablero Registrado!!", {
-      style: {
-        backgroundColor: "#1E1E2E",
-        color: "white",
-        duration: 4000,
-      },
-    });
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
@@ -77,7 +84,6 @@ function ModalTablero({ getTebleros, closeModalProyect }) {
               className="px-4 py-2 rounded-md bg-[#51B13F] text-white hover:bg-[#3DDC97]"
               type="submit"
               value="Guardar"
-
             ></input>
           </div>
         </form>

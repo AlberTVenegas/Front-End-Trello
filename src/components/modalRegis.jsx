@@ -1,28 +1,35 @@
 /* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
 import { addTask } from "../api/trello";
-import {toast} from "react-hot-toast";
+import { toast } from "react-hot-toast";
 function ModalRegis({ closeModal, getTask, proyect }) {
   const { register, handleSubmit } = useForm({
     defaultValues: {
       status: "Por hacer",
     },
   });
-  const notify = () =>
-    toast.success("Registro Exitoso!", {
-      style: {
-        backgroundColor: "#1E1E2E",
-        color: "white",
-        duration: 4000,
-      },
-    });
 
   const onSubmit = (data) => {
     async function handleSubmit(data) {
-      await addTask(data);
-      getTask();
-      closeModal(false);
-      notify()
+      toast.promise(
+        (async () => {
+          await addTask(data);
+          getTask();
+          closeModal(false);
+        })(),
+        {
+          loading: "Registrando Tarea...",
+          success: <b>Tareas Registrada!!</b>,
+          error: <b>Error al registrar.</b>,
+        },
+        {
+          style: {
+            backgroundColor: "#1E1E2E",
+            color: "white",
+            duration: 4000,
+          },
+        }
+      );
     }
     handleSubmit(data);
   };
