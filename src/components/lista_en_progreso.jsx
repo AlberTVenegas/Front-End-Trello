@@ -2,7 +2,6 @@ import "./lista_en_progreso.css";
 import { getallTasks, updateStateTask } from "../api/trello";
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
-
 import BtnRegis from "./btnRegis";
 import React from "react";
 import Columns from "./columns";
@@ -14,8 +13,11 @@ import {
   useSensors,
   PointerSensor,
 } from "@dnd-kit/core";
+import { useLocation } from "react-router-dom";
 
 function Lista_en_progreso() {
+  const location = useLocation();
+  const user = location.state.user;
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -46,7 +48,8 @@ function Lista_en_progreso() {
   ];
   async function getTebleros() {
     const tableros = await getAllProyect();
-    setProyect(tableros.data);
+    const result = tableros.data.filter((tablero) => tablero.user === user.id);
+    setProyect(result);
   }
 
   async function getTask() {
@@ -106,12 +109,13 @@ function Lista_en_progreso() {
       <Toaster />
       <div className="box-content">
         <div className="title-btn">
-          <h1 className="txt-title">Organiza tu Trabajo</h1>
+          <h1 className="txt-title">Organiza tu Trabajo {user.nombre}</h1>
           <div className="serparator-title"></div>
           <BtnRegis
             getTask={getTask}
             getTebleros={getTebleros}
             proyect={proyect}
+            user={user}
           ></BtnRegis>
           <div className="Tableros">
             <section className="active-board">
@@ -141,6 +145,7 @@ function Lista_en_progreso() {
             })}
           </DndContext>
         </section>
+
       </div>
     </>
   );

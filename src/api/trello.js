@@ -29,3 +29,9 @@ export const deleteTask = (id) => {
 export const deleteTablero = (id) => {
     return axios.delete(`https://back-end-trello-production.up.railway.app/trello/api/v1/tableros/${id}/`)
 }
+export const getUser = () => {
+    return axios.get('https://back-end-trello-production.up.railway.app/trello/api/v1/user/')
+}
+export const addUser = (user) => {
+    return axios.post('https://back-end-trello-production.up.railway.app/trello/api/v1/user/', user)
+}

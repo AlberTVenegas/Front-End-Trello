@@ -3,10 +3,12 @@ import { useForm } from "react-hook-form";
 import { addTablero } from "../api/trello";
 import { toast } from "react-hot-toast";
 
-function ModalTablero({ getTebleros, closeModalProyect }) {
+function ModalTablero({ getTebleros, closeModalProyect, user }) {
+  console.log(user.id);
   const { register, handleSubmit } = useForm({
     defaultValues: {
       is_active: true,
+      user: user.id,
     },
   });
 
@@ -15,7 +17,6 @@ function ModalTablero({ getTebleros, closeModalProyect }) {
       toast.promise(
         (async () => {
           await addTablero(data);
-
           getTebleros();
           closeModalProyect(false);
         })(),
