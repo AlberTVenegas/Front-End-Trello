@@ -56,7 +56,7 @@ function FormLogin() {
       <Toaster></Toaster>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <header className="head">
-          <img className="imgs" src="public/trello_Icon.png" alt="" />
+          <img className="imgs" src="/trello_Icon.png" alt="" />
           <h1 className="title-login">Trello </h1>
         </header>
 
@@ -85,8 +85,8 @@ function FormLogin() {
         </div>
       </form>
       <div className="img-s">
-        <img className="trello-left" src="dist/assets/trelloleft.svg" alt="" />
-        <img className="trello-left" src="public/trello-right.svg" alt="" />
+        <img className="trello-left" src="/trelloleft.svg" alt="" />
+        <img className="trello-left" src="/trello-right.svg" alt="" />
       </div>
     </div>
   );
