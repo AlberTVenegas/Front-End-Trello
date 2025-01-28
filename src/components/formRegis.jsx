@@ -63,8 +63,8 @@ function FormRegis() {
         </div>
       </form>
       <div className="img-s">
-        <img className="trello-left" src="src/assets/trelloleft.svg" alt="" />
-        <img className="trello-left" src="src/assets/trello-right.svg" alt="" />
+        <img className="trello-left" src="/trelloleft.svg" alt="" />
+        <img className="trello-left" src="/trello-right.svg" alt="" />
       </div>
     </div>
   );
