@@ -1,7 +1,7 @@
 import "./formRegis.css";
 import { addUser } from "../api/trello";
 import { useForm } from "react-hook-form";
-import { toast, Toaster } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 function FormRegis() {
