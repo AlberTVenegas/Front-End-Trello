@@ -1,6 +1,7 @@
 import "./lista_en_progreso.css";
 import { getallTasks, updateStateTask } from "../api/trello";
 import { useEffect, useState } from "react";
+
 import BtnRegis from "./btnRegis";
 import React from "react";
 import Columns from "./columns";
@@ -116,7 +117,7 @@ function Lista_en_progreso() {
       <div className="box-content">
         <nav className="nav-d">
           <img
-            src="dist/assets/trelloIcon.png"
+            src="src/assets/trello_Icon.png"
             alt="img not fund"
             className="icon_trello"
           />
