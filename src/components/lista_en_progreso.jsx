@@ -117,7 +117,7 @@ function Lista_en_progreso() {
       <div className="box-content">
         <nav className="nav-d">
           <img
-            src="src/assets/trello_Icon.png"
+            src="/trello_Icon.png"
             alt="img not fund"
             className="icon_trello"
           />
