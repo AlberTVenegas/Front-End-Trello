@@ -1,21 +1,44 @@
 /* General Styles for Form */
 .form-container {
-
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #1E1E2E;
+    width: 209vh;
+}
+
+.head {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+
+}
+
+.title-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #172B4D;
+    font-weight: bold;
+    font-family: "Charlie Text", "Inter", sans-serif;
+
+}
+
+.imgs {
+    height: 32px;
+    width: 32px;
 }
 
 .form {
-    background-color: #2E2E3A;
+    position: absolute;
     padding: 30px;
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: #fff;
 }
 
 .form h2 {
@@ -28,46 +51,40 @@
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    background-color: #3E3E4E;
     border: 1px solid #444;
     border-radius: 5px;
-    color: #fff;
     font-size: 16px;
 }
 
 .input-field:focus {
     outline: none;
-    border-color: #8A7FF6;
+    border-color: #518FE1;
 }
 
 .submit-button {
     margin-top: 8px;
     width: 100%;
     padding: 12px;
-    background-color: #8A7FF6;
-    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
 
-.submit-button:hover {
-    background-color: #6E5FF5;
-}
 
-.submit-button:active {
-    background-color: #5C4AE1;
-}
+
+
 
 .redirect-container {
+    gap: 8px;
+    flex-direction: column;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
 .redirect-button {
-    background-color: #444;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -77,14 +94,23 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-.redirect-button:hover {
-    background-color: #6E5FF5;
-}
 
-.redirect-button:active {
-    background-color: #5C4AE1;
-}
+
 
 .title_regis {
     font-size: 294px;
+}
+
+.img-s {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    margin-top: 510px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trello-left {
+    width: 400px;
+    height: 400px;
 }

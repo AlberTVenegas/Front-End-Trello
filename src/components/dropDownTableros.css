@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box-drop {
+    height: 100%;
+    border-left: 0.375rem;
+
+}
+
+.btn-drop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 160px;
+
+    transition: all 0.3s ease-in-out;
+
+}

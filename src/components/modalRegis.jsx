@@ -24,7 +24,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
         },
         {
           style: {
-            backgroundColor: "#1E1E2E",
+            backgroundColor: "#087DC1",
             color: "white",
             duration: 4000,
           },
@@ -35,11 +35,11 @@ function ModalRegis({ closeModal, getTask, proyect }) {
   };
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-[#2A2A40] w-full max-w-md rounded-lg shadow-lg p-6 space-y-6">
+      <div className="bg-[#F1F2F4] w-full max-w-md rounded-lg shadow-lg p-6 space-y-6">
         <div className="flex justify-between items-center border-b border-[#3E3E4E] pb-2">
-          <h2 className="text-xl font-bold text-white">Registrar Tarea</h2>
+          <h2 className="text-xl font-bold text-[#087DC1]">Registrar Tarea</h2>
           <button
-            className="text-gray-400 hover:text-red-500"
+            className="text-gray-600 hover:text-[#FF9800]"
             aria-label="Cerrar modal"
             onClick={() => {
               closeModal(false);
@@ -53,14 +53,16 @@ function ModalRegis({ closeModal, getTask, proyect }) {
           <div>
             <label
               htmlFor="task-title"
-              className="block text-sm font-medium text-white mb-1"
-            ></label>
+              className="block text-sm font-medium text-[#087DC1] mb-1"
+            >
+              Título de la Tarea
+            </label>
             <input
               type="text"
               {...register("title", {
                 required: true,
               })}
-              className="w-full px-4 py-2 rounded-md bg-[#1E1E2E] text-white border border-[#3E3E4E] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
+              className="w-full px-4 py-2 rounded-md bg-white text-[#087DC1] border border-[#6994B9] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
               placeholder="Escribe el título de la tarea"
             />
           </div>
@@ -68,7 +70,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
           <div>
             <label
               htmlFor="task-desc"
-              className="block text-sm font-medium text-white mb-1"
+              className="block text-sm font-medium text-[#087DC1] mb-1"
             >
               Descripción
             </label>
@@ -78,7 +80,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
                 required: true,
               })}
               rows="4"
-              className="w-full px-4 py-2 rounded-md bg-[#1E1E2E] text-white border border-[#3E3E4E] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
+              className="w-full px-4 py-2 rounded-md bg-white text-[#087DC1] border border-[#6994B9] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
               placeholder="Describe brevemente la tarea"
             ></textarea>
           </div>
@@ -87,7 +89,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
           <div>
             <label
               htmlFor="task-priority"
-              className="block text-sm font-medium text-white mb-1"
+              className="block text-sm font-medium text-[#087DC1] mb-1"
             >
               Prioridad
             </label>
@@ -96,17 +98,18 @@ function ModalRegis({ closeModal, getTask, proyect }) {
               {...register("priority", {
                 required: true,
               })}
-              className="w-full px-4 py-2 rounded-md bg-[#1E1E2E] text-white border border-[#3E3E4E] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
+              className="w-full px-4 py-2 rounded-md bg-white text-[#087DC1] border border-[#6994B9] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
             >
               <option value="Alta">Alta</option>
               <option value="Media">Media</option>
               <option value="Baja">Baja</option>
             </select>
           </div>
+
           <div>
             <label
               htmlFor="task-priority"
-              className="block text-sm font-medium text-white mb-1"
+              className="block text-sm font-medium text-[#087DC1] mb-1"
             >
               Tablero
             </label>
@@ -115,7 +118,7 @@ function ModalRegis({ closeModal, getTask, proyect }) {
               {...register("tablero", {
                 required: true,
               })}
-              className="w-full px-4 py-2 rounded-md bg-[#1E1E2E] text-white border border-[#3E3E4E] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
+              className="w-full px-4 py-2 rounded-md bg-white text-[#087DC1] border border-[#6994B9] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
             >
               <option value=" ">Selecione El Tablero</option>
               {proyect.map((proyect) => {
@@ -127,9 +130,10 @@ function ModalRegis({ closeModal, getTask, proyect }) {
               })}
             </select>
           </div>
-          <div className="flex justify-end space-x-4 pt-4 border-t border-[#3E3E4E]">
+
+          <div className="flex justify-end space-x-4 pt-4 border-t border-[#6994B9]">
             <button
-              className="px-4 py-2 rounded-md bg-gray-600 text-white hover:bg-gray-500"
+              className="px-4 py-2 rounded-md bg-[#6994B9] text-white  hover:bg-gray-500"
               type="button"
               onClick={() => {
                 closeModal(false);

@@ -20,19 +20,20 @@ function FormRegis() {
         },
         {
           style: {
-            backgroundColor: "#1E1E2E",
+            backgroundColor: "#087DC1",
             color: "white",
             duration: 4000,
           },
         }
       );
     }
-    handleSubmit(data);
+    if (data) {
+      handleSubmit(data);
+    }
   };
 
   return (
     <div className="form-container">
-      <Toaster></Toaster>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <header>
           <h2 className="title_regis">Registrar cuenta</h2>
@@ -61,6 +62,10 @@ function FormRegis() {
           </Link>
         </div>
       </form>
+      <div className="img-s">
+        <img className="trello-left" src="src/assets/trelloleft.svg" alt="" />
+        <img className="trello-left" src="src/assets/trello-right.svg" alt="" />
+      </div>
     </div>
   );
 }

@@ -4,16 +4,16 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1E1E2E;
+
 }
 
 .form {
-    background-color: #2E2E3A;
+    background-color: #a9cbec;
     padding: 30px;
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: #fff;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,24 +30,23 @@
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    background-color: #3E3E4E;
     border: 1px solid #444;
     border-radius: 5px;
-    color: #fff;
+    color: black;
     font-size: 16px;
 }
 
 .input-field:focus {
     outline: none;
-    border-color: #8A7FF6;
+    border-color: #518FE1;
 }
 
 .submit-button {
     font-weight: 600;
     width: 100%;
     padding: 12px;
-    background-color: #8A7FF6;
-    color: #fff;
+    background-color: #518FE1;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -57,12 +56,9 @@
 }
 
 .submit-button:hover {
-    background-color: #6E5FF5;
+    background-color: #357fe0;
 }
 
-.submit-button:active {
-    background-color: #5C4AE1;
-}
 
 .redirect-container {
     display: flex;
@@ -73,7 +69,7 @@
 .redirect-button {
     font-weight: 600;
 
-    background-color: #444;
+    background-color: #172B4D;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -84,13 +80,28 @@
 }
 
 .redirect-button:hover {
-    background-color: #6E5FF5;
+    background-color: #172B4D;
 }
 
-.redirect-button:active {
-    background-color: #5C4AE1;
-}
+
 
 .title_regis {
-    font-size: 24px;
+    font-size: 32px;
+    color: #172B4D;
+    font-weight: bold;
+    font-family: "Charlie Text", "Inter", sans-serif;
+}
+
+.img-s {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    margin-top: 510px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trello-left {
+    width: 400px;
+    height: 400px;
 }

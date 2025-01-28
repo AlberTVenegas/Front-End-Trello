@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 .list {
+
   transition: all ease 0.2s;
-  padding: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 8px;
   will-change: transform, box-shadow;
 }
 
@@ -9,23 +14,37 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 820px;
 
 }
 
 .list-container {
-  background-color: #2e2e3e;
-  border-radius: 16px;
-  margin: 10px;
-  width: 370px;
-  min-height: 900px;
-  max-height: 900px;
+  background-color: #A9CBEC;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  width: 450px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* Habilitar scroll vertical */
-  padding: 10px;
+  height: 100%;
 
 
 }
 
+.icon_trello {
+  padding: 8PX;
+  margin: 8px;
+}
+
+.nav-d {
+  width: 100%;
+  background-color: #255C8E;
+  border-radius: 8px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
 
 
 
@@ -33,11 +52,11 @@
   padding: 10px;
 }
 
-.title {
+.title-s {
   font-size: 24px;
   font-weight: bold;
   margin: 10px;
-  color: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +66,7 @@
 .color-red {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-color: #f44336a1;
+  background-color: #A0A0A0;
   height: 8px;
   margin: 0;
   padding: 0;
@@ -57,17 +76,38 @@
 .color-gren {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-color: #5cf436a1;
+  background-color: #28A745;
   height: 8px;
   margin: 0;
   padding: 0;
   transition: background-color 0.5s ease;
 }
 
-.color-yellow {
+.color-orange {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-color: #e7f436a1;
+  background-color: #FFA500;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+.color-blue {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #007BFF;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+
+.color-grey {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #A0A0A0;
   height: 8px;
   margin: 0;
   padding: 0;
@@ -75,11 +115,11 @@
 }
 
 .card {
-  background-color: #3e3e4e;
+  background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: black;
   transition: background-color 0.5s ease;
 
 }
@@ -110,9 +150,6 @@
   color: white;
 }
 
-.separator {
-  border-bottom: #0000006c solid 2px;
-}
 
 .btn-delete {
   height: 24px;
@@ -123,7 +160,6 @@
 }
 
 .btn-delete:hover {
-  color: white;
   transform: scale(1.1);
 }
 
@@ -146,7 +182,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c1c34a31;
+  background-color: #fbff0031;
   max-width: fit-content;
   border: #c3b74a70 1px solid;
   border-radius: 5px;
@@ -167,17 +203,17 @@
 }
 
 .priority-alta {
-  color: #c34a4a9d;
+  color: #c34a4a;
   font-size: 16px;
 }
 
 .priority-media {
-  color: #bbc34a9d;
+  color: #696d39;
   font-size: 16px;
 }
 
 .priority-baja {
-  color: #8bc34a9d;
+  color: #8bc34a;
   font-size: 16px;
 }
 
@@ -205,23 +241,23 @@
 }
 
 .dd-zone {
-
-  height: 760px;
-
+  height: 660px;
 }
 
 .box-content {
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 900px;
+  height: 100%;
+  width: 100%;
+  gap: 8px;
 
-  gap: 16px;
 }
 
 .colors-Por-hacer {
-  background-color: #f443363a;
+  background-color: #A0A0A0;
   height: 4px;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
@@ -229,14 +265,21 @@
 }
 
 .colors-Terminado {
-  background-color: #5cf43644;
+  background-color: #28A745;
   height: 4px;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
 }
 
 .colors-En-Progreso {
-  background-color: #e7f4363d;
+  background-color: #007BFF;
+  height: 4px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.colors-En-Revision {
+  background-color: #FFA500;
   height: 4px;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
@@ -247,8 +290,19 @@
   font-weight: 600;
 }
 
+.btn {
+  margin-left: 16PX;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .txt-title {
   font-size: 32px;
+  font-family: "Charlie Text", "Inter", sans-serif;
+  font-weight: bold;
 }
 
 .serparator-title {
@@ -277,13 +331,14 @@
 
 .active-board {
   font-size: 18px;
-  background: #2E2E3E;
+  background: #087CBF;
   border-radius: 8px;
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  width: 330px;
+  width: 396px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-color: rgba(255, 255, 255, 0.1);
 
@@ -291,6 +346,9 @@
 
 .txt-tilte-board {
   margin-left: 16px;
+
+  font-family: "Charlie Text", "Inter", sans-serif;
+
 }
 
 .txt-active {
@@ -298,14 +356,76 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  background: #1E1E2E;
-  height: 40px;
-  width: 175px;
-  margin-left: 10px;
-  border-radius: 8px;
+  background: #255C8E;
+  height: 100%;
+  margin-left: 16px;
+  width: 270px;
 }
 
-.cerrar_sesión {
-  border: red solid;
-  margin-bottom: 850px;
+
+.txt-tableros {
+  font-size: 18px;
+  font-family: "Charlie Text", "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 190px;
+  background-color: #087DC0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.375rem;
+  cursor: pointer;
+
+}
+
+.txt-tableros:hover {
+  background-color: #059cf3;
+
+}
+
+.box-title {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+}
+
+.tableros {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  background-color: #255C8E;
+  border-radius: 8px;
+  height: 50px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn .close {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  height: 100%;
+  width: 840px;
+  
+
+
+}
+.button-exit {
+  height: 100%;
+  width: 190px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.button-exit:hover {
+  background-color: #059cf369;
+
 }

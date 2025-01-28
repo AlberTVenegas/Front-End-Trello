@@ -3,3 +3,24 @@
 @tailwind utilities;
 
 
+.button {
+    height: 100%;
+    width: 190px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button:hover {
+    background-color: #059cf369;
+
+}
+
+.modal-close {
+    z-index: 999;
+}

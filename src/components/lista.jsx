@@ -28,7 +28,7 @@ function Lista({ task, getTask }) {
         },
         {
           style: {
-            backgroundColor: "#1E1E2E",
+            backgroundColor: "#087DC1",
             color: "white",
             duration: 4000,
           },
@@ -54,7 +54,10 @@ function Lista({ task, getTask }) {
         content = "color-gren";
         break;
       case "En progreso":
-        content = "color-yellow";
+        content = "color-blue";
+        break;
+      case "En revision":
+        content = "color-orange";
         break;
     }
     return <div className={content} />;

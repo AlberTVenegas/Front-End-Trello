@@ -23,6 +23,9 @@ function Columns({ columns, res, getTask }) {
       case "En progreso":
         content = "colors-En-Progreso";
         break;
+      case "En revision":
+        content = "colors-En-Revision";
+        break;
     }
     return <div className={content}></div>;
   };
@@ -31,8 +34,7 @@ function Columns({ columns, res, getTask }) {
     <div className="list-container" key={columns.id}>
       <div className="list-header">
         {setColorsColumns(columns.name)}
-        <h2 className="title">{columns.name}</h2>
-        <div className="separator"></div>
+        <h2 className="title-s">{columns.name} </h2>
       </div>
 
       <div className="dd-zone" ref={setNodeRef}>

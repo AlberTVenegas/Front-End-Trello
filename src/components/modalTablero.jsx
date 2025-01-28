@@ -27,7 +27,7 @@ function ModalTablero({ getTebleros, closeModalProyect, user }) {
         },
         {
           style: {
-            backgroundColor: "#1E1E2E",
+            backgroundColor: "#087DC1",
             color: "white",
             duration: 4000,
           },
@@ -39,9 +39,11 @@ function ModalTablero({ getTebleros, closeModalProyect, user }) {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-[#2A2A40] w-full max-w-md rounded-lg shadow-lg p-6 space-y-6">
+      <div className="bg-[#F1F2F4] w-full max-w-md rounded-lg shadow-lg p-6 space-y-6">
         <div className="flex justify-between items-center border-b border-[#3E3E4E] pb-2">
-          <h2 className="text-xl font-bold text-white">Registrar Tablero</h2>
+          <h2 className="text-xl font-bold text-[#087DCB]">
+            Registrar Tablero
+          </h2>
           <button
             className="text-gray-400 hover:text-red-500"
             aria-label="Cerrar modal"
@@ -64,7 +66,7 @@ function ModalTablero({ getTebleros, closeModalProyect, user }) {
               {...register("nombre", {
                 required: true,
               })}
-              className="w-full px-4 py-2 rounded-md bg-[#1E1E2E] text-white border border-[#3E3E4E] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
+              className="w-full px-4 py-2 rounded-md bg-[#FFFFFF] text-[#087DCB] border border-[#3E3E4E] focus:ring-2 focus:ring-[#736CED] focus:outline-none"
               placeholder="Escribe el título del Tablero"
             />
           </div>
@@ -73,7 +75,7 @@ function ModalTablero({ getTebleros, closeModalProyect, user }) {
 
           <div className="flex justify-end space-x-4 pt-4 border-t border-[#3E3E4E]">
             <button
-              className="px-4 py-2 rounded-md bg-gray-600 text-white hover:bg-gray-500"
+              className="px-4 py-2 rounded-md bg-[#087DC1] text-white hover:bg-gray-500"
               type="button"
               onClick={() => {
                 closeModalProyect(false);

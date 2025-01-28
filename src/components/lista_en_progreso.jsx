@@ -1,12 +1,14 @@
 import "./lista_en_progreso.css";
 import { getallTasks, updateStateTask } from "../api/trello";
 import { useEffect, useState } from "react";
-import { Toaster } from "react-hot-toast";
 import BtnRegis from "./btnRegis";
 import React from "react";
 import Columns from "./columns";
-import { Tableros } from "./tableros";
 import { getAllProyect } from "../api/trello";
+import DropDownTableros from "./dropDownTableros";
+import LoginIcon from "@mui/icons-material/Login";
+import { Link } from "react-router-dom";
+
 import {
   DndContext,
   useSensor,
@@ -40,6 +42,10 @@ function Lista_en_progreso() {
     {
       id: "En progreso",
       name: "En progreso",
+    },
+    {
+      id: "En revision",
+      name: "En revision",
     },
     {
       id: "Terminado",
@@ -99,6 +105,7 @@ function Lista_en_progreso() {
     );
     handleUpdateSatet(newStatus, taskID);
   };
+  const [CloseSesion, setCloseSesion] = useState(false);
 
   async function handleUpdateSatet(newStatus, id) {
     await updateStateTask(id, newStatus);
@@ -106,29 +113,74 @@ function Lista_en_progreso() {
 
   return (
     <>
-      <Toaster />
       <div className="box-content">
-        <div className="title-btn">
-          <h1 className="txt-title">Organiza tu Trabajo {user.nombre}</h1>
-          <div className="serparator-title"></div>
-          <BtnRegis
-            getTask={getTask}
-            getTebleros={getTebleros}
-            proyect={proyect}
-            user={user}
-          ></BtnRegis>
-          <div className="Tableros">
-            <section className="active-board">
-              <h3 className="txt-tilte-board">Tablero Activo:</h3>
-              <h3 className="txt-active">{tablero_active.nombre}</h3>
-            </section>
-            <Tableros
+        <nav className="nav-d">
+          <img
+            src="src/assets/trelloIcon.png"
+            alt="img not fund"
+            className="icon_trello"
+          />
+          <h1 className="txt-title">Trello</h1>
+
+          <section className="btn">
+            <BtnRegis
+              getTask={getTask}
+              getTebleros={getTebleros}
+              proyect={proyect}
+              user={user}
+            ></BtnRegis>
+            <DropDownTableros
               proyect={proyect}
               getTebleros={getTebleros}
               setTablero_active={setTablero_active}
             />
+            <h3 className="txt-active">{tablero_active.nombre}</h3>
+            <div className="close">
+              <button
+                onClick={() => {
+                  setCloseSesion(true);
+                }}
+                className="button-exit"
+              >
+                <LoginIcon color="white" />
+                Cerrar Sesión
+              </button>
+            </div>
+          </section>
+        </nav>
+
+        {CloseSesion && (
+          <div className="modal-close fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-[#6994B9] p-6 rounded-xl shadow-lg text-white w-80 text-center">
+              <h2 className="text-xl font-bold">¿Estás seguro?</h2>
+              <p className="text-gray-300 mt-2">
+                Tu sesión se cerrará y deberás iniciar sesión nuevamente.
+              </p>
+
+              {/* Botones */}
+              <div className="mt-4 flex justify-around">
+                <button
+                  className="px-4 py-2 bg-[#6C757D] rounded-lg hover:bg-[#5A636A] transition"
+                  onClick={() => {
+                    setCloseSesion(false);
+                  }}
+                >
+                  Cancelar
+                </button>
+                <Link to="/">
+                  <button
+                    className="px-4 py-2 bg-[#087CBF] rounded-lg hover:bg-[#34adf3] transition"
+                    onClick={() => {
+                      setCloseSesion(false);
+                    }}
+                  >
+                    Cerrar Sesión
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
 
         <section className="box-columns">
           <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
@@ -145,7 +197,6 @@ function Lista_en_progreso() {
             })}
           </DndContext>
         </section>
-
       </div>
     </>
   );
