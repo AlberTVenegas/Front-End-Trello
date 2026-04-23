@@ -114,3 +114,155 @@
     width: 400px;
     height: 400px;
 }
+
+/* ── Demo credentials card ─────────────────────────── */
+.demo-card {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 240px;
+    background: linear-gradient(135deg, #0052CC 0%, #0747A6 100%);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 82, 204, 0.35), 0 2px 8px rgba(0,0,0,0.18);
+    overflow: hidden;
+    z-index: 100;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.demo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.demo-header:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.demo-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.demo-badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.25); }
+    50%       { box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+}
+
+.demo-header-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.3px;
+}
+
+.demo-chevron {
+    color: rgba(255,255,255,0.75);
+    display: flex;
+    align-items: center;
+}
+
+/* ── Collapsible body ───────────────────────────────── */
+.demo-body {
+    padding: 0 14px 14px;
+}
+
+.demo-subtitle {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.demo-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 9px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: background 0.2s;
+}
+
+.demo-row:last-child {
+    margin-bottom: 0;
+}
+
+.demo-row:hover {
+    background: rgba(255,255,255,0.16);
+}
+
+.demo-icon {
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.demo-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.demo-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.demo-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-family: "Courier New", monospace;
+}
+
+.demo-copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 13px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.demo-copy-btn:hover {
+    background: rgba(255,255,255,0.28);
+    color: #fff;
+}
+
+.demo-copy-btn.copied {
+    background: #36B37E;
+    color: #fff;
+}
